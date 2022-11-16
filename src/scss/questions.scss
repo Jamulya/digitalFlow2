@@ -1,0 +1,58 @@
+.questions{
+    padding: 109px 0 130px;
+    &__title{
+        font-family: 'SF Pro Display';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 57px;
+        color: #000000;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    &__accordion{
+        max-width: 765px;
+        margin: 0 auto;
+    }
+    &__accordion-quest{
+        padding: 23px 145px 23px 100px;
+        position: relative;
+        z-index: 2;
+        background: #fff;
+
+        &::before{
+            content: '';
+            position: absolute;
+            left: 33px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 2px;
+            width: 35px;
+            background: #000000;
+        }
+        &_active{
+            box-shadow: 2px 2px 5px rgba(20, 29, 61, 0.15), -2px -2px 5px rgba(20, 29, 61, 0.15);
+            border-radius: 10px;
+            &::before{
+                display: none;
+            }
+        }
+    }
+    &__accordion-arrow{
+        position: absolute;
+        top: 37px;
+        right: 61px;
+    }
+    &__accordion-answers{
+        display: none;
+        &_active{
+            z-index: 1;
+            position: relative;
+            display: block;
+            padding: 49px 80px 29px 100px;
+            box-shadow: inset 0px 0px 13px rgba(20, 29, 61, 0.08);
+            border-radius: 10px;
+            transform: translateY(-20px);
+        }
+    }
+}
